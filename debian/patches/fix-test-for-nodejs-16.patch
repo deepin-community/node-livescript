@@ -1,0 +1,19 @@
+Description: fix error output for nodejs >= 16
+Author: Yadd <yadd@debian.org>
+Bug-Debian: https://bugs.debian.org/1011806
+Forwarded: no
+Last-Update: 2022-06-01
+
+--- a/test/loop.ls
++++ b/test/loop.ls
+@@ -754,8 +754,8 @@
+ # silly or otherwise.
+ deep-equal [] [0 for x in 42]
+ deep-equal [] [0 for x in -42]
+-throws "Cannot read property 'length' of null" -> [0 for x in null]
+-throws "Cannot read property 'length' of undefined" -> [0 for x in void]
++throws "Cannot read properties of null (reading 'length')" -> [0 for x in null]
++throws "Cannot read properties of undefined (reading 'length')" -> [0 for x in void]
+ 
+ # [LiveScript#1035](https://github.com/gkz/LiveScript/issues/1035)
+ for [1 2 3] then 1 else 0

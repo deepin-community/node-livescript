@@ -1,5 +1,91 @@
-template-repository (1.0-1) unstable; urgency=medium
+node-livescript (1.6.1+dfsg-3) unstable; urgency=medium
 
-  * Initial release
+  * Team upload
 
- -- Tsic404 <liuheng@deepin.org>  Sat, 28 Jan 2023 13:46:49 +0800
+  [ Debian Janitor ]
+  * Remove constraints unnecessary since buster:
+    + livescript: Drop versioned constraint on node-source-map and
+      node-source-map-support in Depends.
+
+  [ Yadd ]
+  * Declare compliance with policy 4.6.1
+  * Fix test for nodejs >= 16, error strings changed (Closes: #1011806)
+
+ -- Yadd <yadd@debian.org>  Wed, 01 Jun 2022 12:26:12 +0200
+
+node-livescript (1.6.1+dfsg-2) unstable; urgency=medium
+
+  * Team upload
+  * Modernize debian/watch
+    * Fix GitHub tags regex
+    * Fix filenamemangle
+  * Update standards version to 4.6.0, no changes needed.
+  * Update nodejs dependency => nodejs:any
+
+ -- Yadd <yadd@debian.org>  Tue, 16 Nov 2021 12:31:52 +0100
+
+node-livescript (1.6.1+dfsg-1) unstable; urgency=medium
+
+  * Team upload
+
+  [ Debian Janitor ]
+  * Trim trailing whitespace.
+  * Use secure copyright file specification URI.
+  * Bump debhelper from old 11 to 12.
+  * Set debhelper-compat version in Build-Depends.
+  * Set upstream metadata fields: Bug-Database, Bug-Submit, Repository,
+    Repository-Browse.
+  * Update standards version to 4.4.1, no changes needed.
+
+  [ Xavier Guimard ]
+  * Bump debhelper compatibility level to 13
+  * Declare compliance with policy 4.5.0
+  * Add "Rules-Requires-Root: no"
+  * Change section to javascript
+  * Add debian/gbp.conf
+  * Declare node-livescript
+  * Use dh-sequence-nodejs auto test & install
+  * New upstream version 1.6.1+dfsg
+  * Update copyright
+  * Drop unneeded version constraints from (build) dependencies
+  * Refresh patches
+  * Generate manpage using help2man
+
+ -- Xavier Guimard <yadd@debian.org>  Sun, 01 Nov 2020 16:39:35 +0100
+
+node-livescript (1.6.0+dfsg-1) unstable; urgency=medium
+
+  * New upstream version 1.6.0+dfsg
+  * Drop patch applied upstream
+  * Bump Standards-Version to 4.3.0 (no changes needed)
+  * Bump debhelper compatibility level to 11
+  * Update dependencies
+  * Use salsa.debian.org in Vcs-* fields
+
+ -- Pirate Praveen <praveen@debian.org>  Mon, 07 Jan 2019 17:13:47 +0530
+
+node-livescript (1.5.0+dfsg-4) unstable; urgency=medium
+
+  * Upstream fix a regexp failure test with node > 6
+  * Drop nodejs renaming from patch
+
+ -- Jérémy Lal <kapouer@melix.org>  Wed, 03 Jan 2018 23:47:18 +0100
+
+node-livescript (1.5.0+dfsg-3) unstable; urgency=medium
+
+  * Add livescript to builddeps (Closes: #841587)
+  * Add jison to autopkgtest depends (fixes autopkgtest failure)
+
+ -- Pirate Praveen <praveen@debian.org>  Sat, 19 Nov 2016 22:53:58 +0530
+
+node-livescript (1.5.0+dfsg-2) unstable; urgency=medium
+
+  * Use jison package, drop npm (Closes: #840760)
+
+ -- Pirate Praveen <praveen@debian.org>  Sat, 15 Oct 2016 22:32:20 +0530
+
+node-livescript (1.5.0+dfsg-1) unstable; urgency=low
+
+  * Initial release (Closes: #840514)
+
+ -- Pirate Praveen <praveen@debian.org>  Wed, 12 Oct 2016 17:08:45 +0530

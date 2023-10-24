@@ -1,0 +1,12 @@
+Description: Disable npm
+--- a/Makefile
++++ b/Makefile
+@@ -43,7 +43,7 @@
+ 	make force && make force && make test && make coverage
+ 
+ install: build
+-	npm install .
++	#npm install .
+ 
+ dev-install: package.json
+ 	npm install .
