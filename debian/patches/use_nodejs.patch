@@ -1,0 +1,25 @@
+Description: Use_nodejs
+--- a/Makefile
++++ b/Makefile
+@@ -43,7 +43,7 @@
+ 	make force && make force && make test && make coverage
+ 
+ install: build
+-	npm install -g .
++	npm install .
+ 
+ dev-install: package.json
+ 	npm install .
+@@ -58,8 +58,8 @@
+ 	wc --lines src/*
+ 
+ clean:
+-	rm -f ./*.js
+-	rm -rf lib
+-	rm -rf browser/*.js
++#	rm -f ./*.js
++#	rm -rf lib
++#	rm -rf browser/*.js
+ 	rm -rf coverage
+-	rm -f package.json
++#	rm -f package.json

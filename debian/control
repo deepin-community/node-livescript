@@ -1,15 +1,34 @@
-Source: template-repository
-Section: unknown
+Source: node-livescript
+Maintainer: Debian Javascript Maintainers <pkg-javascript-devel@lists.alioth.debian.org>
+Uploaders: Pirate Praveen <praveen@debian.org>
+Section: javascript
+Testsuite: autopkgtest-pkg-nodejs
 Priority: optional
-Maintainer: Tsic404 <liuheng@deepin.org>
-Build-Depends: debhelper (>= 11)
-Standards-Version: 4.1.3
-Homepage: https://github.com/deepin-community/template-repository
-#Vcs-Browser: https://salsa.debian.org/debian/deepin-community-template-repository
-#Vcs-Git: https://salsa.debian.org/debian/deepin-community-template-repository.git
+Build-Depends: debhelper-compat (= 13)
+ , dh-sequence-nodejs
+ , help2man
+ , jison
+ , livescript
+ , node-source-map-support
+Standards-Version: 4.6.1
+Vcs-Browser: https://salsa.debian.org/js-team/node-livescript
+Vcs-Git: https://salsa.debian.org/js-team/node-livescript.git
+Homepage: https://livescript.net
+Rules-Requires-Root: no
 
-Package: template-repository
-Architecture: any
-Depends: ${shlibs:Depends}, ${misc:Depends}
-Description: <insert up to 60 chars description>
- <insert long description, indented with spaces>
+Package: livescript
+Architecture: all
+Depends: ${misc:Depends}
+ , node-optionator
+ , node-prelude-ls
+ , node-source-map
+ , node-source-map-support
+ , nodejs:any
+Provides: node-livescript
+Description: language which compiles to JavaScript
+ It has a straightforward mapping to JavaScript and allows you to write
+ expressive code devoid of repetitive boilerplate. While LiveScript adds many
+ features to assist in functional style programming, it also has many
+ improvements for object oriented and imperative programming.
+ .
+ Node.js is an event-based server-side JavaScript engine.
